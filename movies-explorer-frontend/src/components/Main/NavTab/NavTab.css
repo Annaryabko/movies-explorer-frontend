@@ -1,0 +1,7 @@
+.navtab {
+  background-color: black;
+  height: 66px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
