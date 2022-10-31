@@ -1,0 +1,109 @@
+.Techs {
+    background-color: #F5F5F5;
+    padding: 100px 0;
+}
+
+.Techs__content {
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.Techs__header {
+    display: block;
+    margin: 0 auto;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 1.2;
+    text-align: center;
+    max-width: 720px;
+    padding-top: 90px;
+}
+
+.Techs__list {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 0;
+    padding-top: 100px;
+    margin: 0;
+}
+
+.Techs__item {
+    width: 90px;
+    height: 60px;
+    background-color: #E8E8E8;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+}
+
+.Techs__text {
+    padding-top: 26px;
+    text-align: center;
+    margin: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+@media screen and (max-width: 1160px) {
+    .Techs {
+      padding: 90px 50px;
+      box-sizing: border-box;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .Techs__item {
+        font-size: 12px;
+        line-height: 15px;
+        width: calc(50% - 5px);
+        width: 84px;
+        height: 57px;
+    }
+    .Techs__text {
+        font-size: 12px;
+        line-height: 18px;
+        padding-top: 26px;
+    }
+    .Techs__list {
+        padding-top: 83px;
+        flex-wrap: wrap;
+    }
+    .Techs__header {
+        padding-top: 80px;
+    }
+
+
+}
+
+@media screen and (max-width: 425px) {
+    .Techs {
+        padding: 70px 18px;
+        background-color: transparent;
+    }
+    .Techs__list {
+        padding: 50px 13vw 0;
+        justify-content: flex-start;
+    }
+    
+    .Techs__text {
+        font-size: 11px;
+        line-height: 16px;
+        padding-top: 24px;  
+    }
+    .Techs__header {
+        padding-top: 60px;
+        font-family: Inter;
+        font-size: 30px;
+        line-height: 36px;
+    }
+    .Techs__item {
+        width: calc(50% - 5px);
+    }
+}

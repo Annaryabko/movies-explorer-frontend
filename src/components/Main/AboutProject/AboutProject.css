@@ -1,0 +1,117 @@
+.AboutProject {
+  padding: 100px 0;
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto; 
+}
+
+.AboutProject__content {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 110px;
+}
+
+.AboutProject__header {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+  margin-bottom: 22px;
+  margin-top: 70px;
+}
+
+.AboutProject__text {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0em;
+}
+
+.AboutProject__progress {
+  display: flex;
+}
+
+.AboutProject__progressBackend {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 25%;
+}
+
+.AboutProject__progressFrontend {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 75%;
+}
+
+.AboutProject__projectText {
+  height: 36px;
+  width: 100%;
+  color: #A0A0A0;
+  font-weight: 400;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 16.94px;
+}
+
+.AboutProject__projectText-backend {
+  background-color: black;
+  color: white;
+}
+
+.AboutProject__projectText-frontend {
+  background-color: #F2F2F2;
+  color: black;
+}
+
+@media screen and (max-width: 1160px) {
+  .AboutProject {
+    padding: 90px 50px;
+    box-sizing: border-box;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .AboutProject__content {
+    gap: 30px;
+    margin-bottom: 93px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .AboutProject {
+    padding: 70px 18px;
+  }
+  .AboutProject__descr {
+    width: 100%;
+  }
+  .AboutProject__content {
+    flex-wrap: wrap;
+    gap: 0;
+    margin-bottom: 60px;
+  }
+  .AboutProject__progressFrontend {
+    width: 65%;
+  }
+  .AboutProject__progressBackend {
+    width: 35%;
+  }
+  .AboutProject__projectText {
+    font-size: 11px;
+    line-height: 13px;
+  }
+  .AboutProject__text {
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 16px; 
+  }
+  .AboutProject__header {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 22px;
+    margin-bottom: 16px;
+    margin-top: 60px;
+  }
+}

@@ -1,0 +1,31 @@
+.navtab {
+  background-color: black;
+  height: 66px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.navtab__link {
+  color: white;
+  text-decoration: underline;
+  cursor: pointer;
+  padding: 0;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 16px;
+}
+
+.navtab__link:hover {
+  opacity: 0.6;
+}
+
+@media screen and (max-width: 425px) {
+  .navtab {
+    gap: 24px;
+  }
+  .navtab__link {
+    font-size: 11px;
+  }
+}
