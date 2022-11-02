@@ -22,6 +22,10 @@
     text-align: right;
 }
 
+.profile__input:focus {
+    border-bottom: 1px solid black;
+}
+
 .profile__input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: black;
 }

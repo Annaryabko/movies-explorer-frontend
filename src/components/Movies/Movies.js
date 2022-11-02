@@ -8,14 +8,17 @@ import MoviesCardList from "./MoviesCardList/MoviesCardList";
 function Movies(props) {
 
   return (
-    <section className="movies">
-      <Header 
-        navOpen = {props.navOpen}
-      />
-      <SearchForm />
-      <MoviesCardList />
-      <Footer />
-    </section>
+
+      <section className="movies">
+        <Header 
+          navOpen = {props.navOpen}
+        />
+        <main>
+          <SearchForm />
+          <MoviesCardList />
+        </main>
+        <Footer />
+      </section>
   );
 }
 

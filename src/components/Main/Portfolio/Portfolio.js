@@ -8,7 +8,7 @@ function Portfolio() {
         <div className="Portfolio__content">
             <a target="_blank" rel="noopener noreferrer" className="Portfolio__link" href="https://github.com/Annaryabko/how-to-learn">Статичный сайт<span className="Portfolio__icon">↗</span></a>
             <a target="_blank" rel="noopener noreferrer" className="Portfolio__link" href="https://annaryabko.github.io/russian-travel/index.html">Адаптивный сайт<span className="Portfolio__icon">↗</span></a>
-            <a target="_blank" rel="noopener noreferrer" className="Portfolio__link" href="https://anna.nomorepartiesxyz.ru/sign-in">Одностраничное приложение<span className="Portfolio__icon">↗</span></a>
+            <a target="_blank" rel="noopener noreferrer" className="Portfolio__link" href="https://github.com/Annaryabko/react-mesto-api-full-gha">Одностраничное приложение<span className="Portfolio__icon">↗</span></a>
 
         </div>
     </section>

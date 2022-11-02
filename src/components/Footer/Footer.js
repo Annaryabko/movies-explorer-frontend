@@ -3,7 +3,7 @@ import React from "react";
 function Footer() {
 
   return (
-    <section className="Footer">
+    <footer className="Footer">
         <div className="Footer__content">
             <p className="Footer__about">Учебный проект Яндекс.Практикум х BeatFilm.</p>
             <div className="Footer__links">
@@ -12,7 +12,7 @@ function Footer() {
                 <a href="https://github.com/Annaryabko/" target="_blank" rel="noopener noreferrer" className='Footer__link'>Github</a>
             </div>
         </div>
-    </section>
+    </footer>
   );
 }
 

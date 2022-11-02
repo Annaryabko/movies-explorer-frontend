@@ -50,6 +50,12 @@
     line-height: 16px;
 }
 
+.register__input:focus {
+    border: 1px solid black;
+}
+
+
+
 .register__input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: black;
 }
@@ -162,4 +168,7 @@
         line-height: 15px;
     }
 
+    .register__title, .register__logo{
+        align-self: center;
+    }
 }

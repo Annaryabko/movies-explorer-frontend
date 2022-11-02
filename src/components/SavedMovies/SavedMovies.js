@@ -12,8 +12,10 @@ function SavedMovies(props) {
       <Header 
         navOpen = {props.navOpen}
       />
-      <SearchForm />
-      <MoviesCardList />
+      <main>
+        <SearchForm />
+        <MoviesCardList />
+      </main>
       <Footer />
     </section>
   );

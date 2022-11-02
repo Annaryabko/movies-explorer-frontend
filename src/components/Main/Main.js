@@ -22,16 +22,18 @@ import Footer from '../Footer/Footer';
 
 function Main() {
   return (
-    <div className="Main">
+    <section className="Main">
       <Header/>
-      <Promo/>
-      <NavTab/>
-      <AboutProject/>
-      <Techs/>
-      <AboutMe/>
-      <Portfolio/>
+      <main>
+        <Promo/>
+        <NavTab/>
+        <AboutProject/>
+        <Techs/>
+        <AboutMe/>
+        <Portfolio/>
+      </main>
       <Footer/>
-    </div>
+    </section>
   );
 }
 
