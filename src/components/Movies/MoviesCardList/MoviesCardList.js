@@ -6,15 +6,21 @@ function MoviesCardList(props) {
   const [moviesToShow, setMoviesToShow] = useState(getInitialMoviesToShow());
   const timer = useRef();
 
+  function onResize() {
+    if (timer.current) {
+      clearTimeout(timer.current);
+    }
+    timer.current = setTimeout(() => {
+      setMoviesToShow(getInitialMoviesToShow());
+    }, 1000);
+  };
+
   React.useEffect(() => {
-    window.addEventListener('resize', () => {
-      if (timer.current) {
-        clearTimeout(timer.current);
-      }
-      timer.current = setTimeout(() => {
-        setMoviesToShow(getInitialMoviesToShow());
-      }, 1000);
-    });
+    window.addEventListener('resize', onResize);
+
+    return () => {
+      window.removeEventListener('resize', onResize);
+    };
   }, []);
 
   function getInitialMoviesToShow() {

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import {login} from '../../utils/Auth';
+const url = process.env.REACT_APP_ROUTE_PREFIX || '';
 
 function Login({history, ...props}) {
     const [email, setEmail] = useState("");
@@ -58,7 +59,9 @@ function Login({history, ...props}) {
   return (
     <main>
         <section className="login">
-        <div className="register__logo"></div>
+        <a className="register__logo-link" href={`${url}/`}>
+            <div className="register__logo"></div>
+          </a>
             <h2 className="register__title">Рады видеть!</h2>
             <form className="register__elems" name="login" onSubmit={onSubmit}>
                 <div className="register__elem">

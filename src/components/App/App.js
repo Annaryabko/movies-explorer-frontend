@@ -16,6 +16,7 @@ import ProtectedRoute from "../../components/ProtectedRoute/ProtectedRoute";
 import MoviesCardList from '../Movies/MoviesCardList/MoviesCardList';
 import ErrorPupup from '../ErrorPopup/ErrorPopup';
 import { api } from '../../utils/MainApi';
+import {login} from '../../utils/Auth';
 
 function App({history}) {
   const [ isErrorOpened, setErrorOpened ] = useState(false);
@@ -23,6 +24,7 @@ function App({history}) {
   const [ currentUser, setCurrentUser ] = useState({});
   const [errorMessage, setErrorMessage] = React.useState('');
   const [ loggedIn, setLoggedIn ] = useState(localStorage.getItem('loggedIn') === 'true');
+  const [serverError, setServerError] = useState("");
   const url = process.env.REACT_APP_ROUTE_PREFIX || '';
 
   useEffect(() => {
@@ -38,7 +40,10 @@ function App({history}) {
 
   function onProfileUpdated() {
     api.getUser()
-    .then((user) => setCurrentUser(user))
+    .then((user) => {
+      setCurrentUser(user);
+      onError("Данные успешно сохранены");
+    })
     .catch(() => {
       setLoggedIn(false);
     });
@@ -73,10 +78,18 @@ function App({history}) {
     history.push(`${url}/movies`);
   }
 
-  function onRegisterSuccess() {
-    setLoggedIn(true);
-    localStorage.setItem('loggedIn', true);
-    history.push(`${url}/movies`);
+  function onRegisterSuccess(email, password) {
+    // setLoggedIn(true);
+    // localStorage.setItem('loggedIn', true);
+
+    login(email, password)
+      .then((token) => {
+        onLoginSuccess();
+      })
+      .catch((error) => {
+        setServerError(error.message);
+        onError(serverError);
+      });
   }
 
   return (
@@ -90,17 +103,46 @@ function App({history}) {
           
           />
         </Route>
+
+        {/* <ProtectedRoute
+          path={`${url}/signup`}
+          component={Register}
+          onSuccess={onRegisterSuccess}
+          onError={onError}
+          loggedIn={!loggedIn}
+        >
+        </ProtectedRoute>
+
+        <ProtectedRoute
+          path={`${url}/signin`}
+          component={Login}
+          onSuccess={onLoginSuccess}
+          onError={onError}
+          loggedIn={!loggedIn}
+        >
+        </ProtectedRoute> */}
+        
         <Route exact path={`${url}/signup`}>
-          <Register
-            onSuccess={onRegisterSuccess}
-            onError={onError}
-          />
+          {
+            loggedIn ? 
+              <Redirect to={`${url}/`} /> : 
+              <Register
+                onSuccess={onRegisterSuccess}
+                onError={onError}
+              />
+          }
         </Route>
+
+
         <Route exact path={`${url}/signin`}>
+          {
+          loggedIn ? 
+          <Redirect to={`${url}/`} /> : 
           <Login 
             onSuccess={onLoginSuccess}
             onError={onError}
           />
+          }
         </Route>
         <ProtectedRoute
           path={`${url}/movies`}

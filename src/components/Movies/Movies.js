@@ -11,8 +11,8 @@ import {api} from "../../utils/MainApi";
 
 
 function Movies(props) {
-  const [movies, setMovies] = useState(JSON.parse(localStorage.getItem('movies') || '[]'));
-  const [initialMovies, setInitialMovies] = useState([]);
+  const [movies, setMovies] = useState([]);
+  const [initialMovies, setInitialMovies] = useState(JSON.parse(localStorage.getItem('initialMovies') || '[]'));
   const [isLoading, setIsLoading] = useState(false);
   const [savedMovies, setSavedMovies] = useState([]);
   const [searchValue, setSearchValue] = useState(JSON.parse(localStorage.getItem('searchValue') || '""'));
@@ -46,7 +46,6 @@ function Movies(props) {
     setMovies(filteredFilms);
     localStorage.setItem('searchValue', JSON.stringify(searchValue));
     localStorage.setItem('isShortMovie', JSON.stringify(isShortMovie));
-    localStorage.setItem('movies', JSON.stringify(filteredFilms));
   }, [searchValue, isShortMovie, initialMovies]);
 
   function handleSearchChange(searchValue, isShortMovie) {
@@ -58,6 +57,7 @@ function Movies(props) {
         .then((movies) => {
           setIsLoading(false);
           setInitialMovies(movies);
+          localStorage.setItem('initialMovies', JSON.stringify(movies));
         })
         .catch(() => {
           setServerError("Ошибка, попробуйте через неделю еще раз");

@@ -1,10 +1,11 @@
 import React from "react";
+const url = process.env.REACT_APP_ROUTE_PREFIX || '';
 
 function MainHeader() {
 
   return (
     <header className="header">
-        <a className="header__logo-link" href="/">
+        <a className="header__logo-link" href={`${url}/`}>
           <div className="header__logo"></div>
         </a>
       <div className="header__menu">

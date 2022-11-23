@@ -26,7 +26,7 @@ export class Api {
 
     saveMovie(data) {
         return this._makeRequest("/movies", "POST", {
-            country: data.country,
+            country: data.country.slice(0, 30),
             director: data.director,
             duration: data.duration,
             year: data.year,

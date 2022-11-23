@@ -21,12 +21,12 @@ function Profile({history, ...props}) {
     }, [user]);
 
     useEffect(() => {
-      if (name && email && !nameError && !emailError)  {
+      if (name && email && !nameError && !emailError && (name !== user.name || email !== user.email))  {
         setFormIsValid(true);
       } else {
         setFormIsValid(false);
       }
-    }, [name, email, nameError, emailError]);
+    }, [name, email, nameError, emailError, user]);
 
     function onSubmit(e) {
         e.preventDefault();

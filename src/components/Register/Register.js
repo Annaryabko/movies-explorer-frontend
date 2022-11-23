@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import {register} from '../../utils/Auth';
+const url = process.env.REACT_APP_ROUTE_PREFIX || '';
 
 function Register({history, ...props}) {
     const [name, setName] = useState("");
@@ -29,7 +30,7 @@ function Register({history, ...props}) {
         
         register(name, email, password)
           .then((token) => {
-            props.onSuccess('test');
+            props.onSuccess(email, password);
           })
           .catch((error) => {
             if (error.code === 409) {
@@ -73,7 +74,9 @@ function Register({history, ...props}) {
   return (
     <main>
         <section className="register">
-        <div className="register__logo"></div>
+          <a className="register__logo-link" href={`${url}/`}>
+            <div className="register__logo"></div>
+          </a>
             <h2 className="register__title">Добро пожаловать!</h2>
             <form className="register__elems" onSubmit={onSubmit}>
                 <div className="register__elem">
