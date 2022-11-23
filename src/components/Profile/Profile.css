@@ -22,6 +22,20 @@
     text-align: right;
 }
 
+.profile__input-errorText {
+    color: #FF4062;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 12px;
+    margin: 20px 0;
+    text-align: right;
+}
+
+.profile__input-error {
+    color: #FF4062;
+    border-bottom: 1px solid #FF4062;
+}
+
 .profile__input:focus {
     border-bottom: 1px solid black;
 }
@@ -86,6 +100,10 @@
 
 .profile__button:hover {
     opacity: 0.6;
+}
+
+.profile__button-unactive {
+    cursor: auto;
 }
 
 .profile__button-edit {

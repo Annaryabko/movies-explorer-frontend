@@ -1,6 +1,6 @@
 import React from "react";
 
-function Header() {
+function MainHeader() {
 
   return (
     <header className="header">
@@ -15,4 +15,4 @@ function Header() {
   );
 }
 
-export default Header;
+export default MainHeader;

@@ -14,12 +14,13 @@
     opacity: 0.6;
 }
 
-.filterCheckbox__outer:active {
+.filterCheckbox__outer-inactive {
     background-color: #9e9e9e;
     justify-content: left;
 }
 
-.filterCheckbox__outer:active .filterCheckbox__inner {
+
+.filterCheckbox__outer-inactive .filterCheckbox__inner {
     background-color: black;
 }
 

@@ -11,7 +11,8 @@
 }
 
 .moviesCard__picture {
-    width: 100%;    
+    width: 100%;
+    height: 65%;    
     background-color: beige;
     display: block;
 }
@@ -30,6 +31,10 @@
 }
 
 .moviesCard__like:hover {
+    background-image: url(../../../images/like-active.svg);
+}
+
+.moviesCard__like-active {
     background-image: url(../../../images/like-active.svg);
 }
 
@@ -53,6 +58,10 @@
     padding: 16px;
 }
 
+.moviesCard__link {
+    text-decoration: none;
+}
+
 .moviesCard__timing {
     padding: 16px;
     margin: 0;
@@ -63,13 +72,13 @@
     padding-top: 0;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1280px) {
     .moviesCard {
         width: calc(50% - 18px);
     }
 }
   
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 768px) {
     .moviesCard {
         width: 100%;
     }

@@ -83,6 +83,11 @@
     border-radius: 3px;
 }
 
+.register__button-unactive {
+    cursor: auto;
+    background-color: grey;
+}
+
 .register__login-text {
     font-size: 14px;
     font-weight: 400;
@@ -144,6 +149,7 @@
 
 .register__input-error {
     color: #FF4062;
+    border: 1px solid #FF4062;
 }
 
 .register__input-error::placeholder {

@@ -11,7 +11,10 @@ import film10 from '../images/films/film10.jpg';
 import film11 from '../images/films/film11.jpg';
 import film12 from '../images/films/film12.jpg';
 
-
+export const BASE_FILMS_URL = 'https://api.nomoreparties.co';
+export const FILMS_URL = BASE_FILMS_URL + '/beatfilm-movies';
+//export const BASE_URL = 'http://localhost:3000';
+export const BASE_URL = 'https://anna-b.nomorepartiesxyz.ru/api';
 
 export const initialFilms = [
     {

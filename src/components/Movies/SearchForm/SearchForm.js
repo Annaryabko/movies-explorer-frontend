@@ -1,17 +1,31 @@
 import React from "react";
 import FilterCheckox from "./FilterCheckbox/FilterCheckbox";
+import { useState } from 'react';
 
 
-function SearchForm() {
+function SearchForm(props) {
+  const [searchValue, setSearchValue] = useState(props.searchData.searchValue);
+  const [isShortMovie, setIsShortMovie] = useState(props.searchData.isShortMovie);
+
+  function handleSearchValue(e) {
+    setSearchValue(e.target.value);
+    props.onChange(e.target.value, isShortMovie);
+  }
+
+  function handleisShortMovieValue(value) {
+    setIsShortMovie(value);
+    props.onChange(searchValue, value);
+  }
+
 
   return (
     <section className="searchForm">
         <form className="searchForm__form">
             <div className="searchForm__icon"></div>
-            <input type="text" className="searchForm__input" placeholder="Фильм" required/>
+            <input type="text" className="searchForm__input" onChange={handleSearchValue} placeholder="Фильм" required value={searchValue}/>
             <button className="searchForm__button">Найти</button>
         </form>
-        <FilterCheckox text="Короткометражки"/>
+        <FilterCheckox text="Короткометражки" onChange={handleisShortMovieValue} value={isShortMovie}/>
     </section>
   );
 }

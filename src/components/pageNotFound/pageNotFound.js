@@ -1,7 +1,12 @@
 import React from "react";
+import { withRouter } from "react-router-dom";
 import { Link } from "react-router-dom";
 
-function PageNotFound() {
+function PageNotFound({history}) {
+
+    function handlerGoBack() {
+      history.goBack();
+    }
 
   return (
     <section className="pageNotFound">
@@ -9,9 +14,9 @@ function PageNotFound() {
         <h1 className="pageNotFound__title">404</h1>
         <p className="pageNotFound__text">Страница не найдена</p>
       </div>
-      <Link className="pageNotFound__backLink">Назад</Link>
+      <a className="pageNotFound__backLink" onClick={handlerGoBack}>Назад</a>
   </section>
   );
 }
 
-export default PageNotFound;
+export default withRouter(PageNotFound);
