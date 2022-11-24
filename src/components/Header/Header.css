@@ -1,0 +1,168 @@
+.headerLoggedIn {
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+  background-color: white;
+  padding: 46px 0 42px;
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: space-between;
+  z-index: 1;
+  top: 50px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  align-items: center;
+}
+.headerLoggedIn-content {
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  /* padding: 46px 0 42px;
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: space-between;
+  z-index: 1;
+  top: 50px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  align-items: center; */
+}
+
+.headerLoggedIn__elem {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px;
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+  line-height: 16px;
+  display: block;
+  padding: 8px 5px
+}
+
+.headerLoggedIn__elem:hover {
+  opacity: 0.6;
+}
+
+.headerLoggedIn__elem-active {
+  font-weight: 400;
+}
+
+.headerLoggedIn__logo-link {
+  height: 38px;
+  width: 38px;
+  cursor: pointer;
+}
+
+.headerLoggedIn__account-icon {
+  height: 14px;
+  width: 11px;
+  background-color: #F9F9F9;
+  padding: 8px;
+  background-image: url(../../images/user-icon.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 4px;
+}
+
+.headerLoggedIn__account-wrapper {
+  display: flex;
+}
+
+.headerLoggedIn__hamburger {
+  background-image: url(../../images/hamburger.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 38px;
+  width: 36px;
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  right: 13px;
+}
+
+.headerLoggedIn__hamburger:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+.headerLoggedIn__link {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  display: block;
+  padding: 8px 5px;
+}
+
+.headerLoggedIn__link:hover {
+  opacity: 0.6;
+}
+
+.header__saved-films {
+  padding-right: 50px;
+}
+
+.header__films {
+  padding-right: 20px;
+}
+
+
+.headerLoggedIn__logo {
+  background-image: url(../../images/logo-black.svg);
+  height: 38px;
+  width: 38px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.headerLoggedIn__menu {
+  display: flex;
+  color: white;
+  align-items: center;
+}
+.header__logo {
+  background-image: url(../../images/logo.svg);
+  height: 38px;
+  width: 38px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 1160px) {
+  .headerLoggedIn {
+    padding: 46px 30px 42px;
+    box-sizing: border-box;
+    position: relative;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .headerLoggedIn__hamburger {
+    visibility: visible;
+    opacity: 1;
+  }
+  .headerLoggedIn__menu {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  .headerLoggedIn {
+    padding: 0 30px 18px;
+    box-sizing: border-box;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .headerLoggedIn {
+    padding: 0 14px 18px;
+    margin: 0;
+  }
+  .headerLoggedIn__link {
+    padding: 5px 12px;
+    font-size: 10px;
+  }
+}

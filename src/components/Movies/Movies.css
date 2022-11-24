@@ -1,0 +1,20 @@
+.movies__noElems {
+    margin: 0 auto;
+    max-width: 1140px;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    display: block;
+}
+
+.movies {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.movies main {
+    flex-grow: 2;
+}
+

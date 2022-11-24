@@ -1,0 +1,20 @@
+.moviesCard__delete {
+    background-image: url(../../../images/delete-icon.svg);
+    height: 7px;
+    width: 7px;
+    background-repeat: no-repeat;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    display: none;
+}
+
+.moviesCard:hover .moviesCard__delete {
+    display: block;
+}
+
+@media screen and (max-width: 425px) {
+    .moviesCard__delete {
+        display: block;
+    }
+}

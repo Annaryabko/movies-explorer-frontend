@@ -1,0 +1,140 @@
+.AboutMe {
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 100px 0;
+}
+
+.AboutMe__content {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 100px;
+}
+
+.AboutMe__texts {
+    width: calc(100% - 270px);
+    max-width: 600px;
+}
+
+.AboutMe__picture {
+    margin-top: 90px;
+    height: 327px;
+    width: 270px;
+    background-image: url(../../../images/avatar.jpeg);
+    border-radius: 10px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+
+.AboutMe__link {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 17px;
+    color: black;
+    text-decoration: none;
+}
+
+.AboutMe__link:hover {
+    opacity: 0.6;
+}
+
+.AboutMe__header {
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 58px;
+    padding-top: 66px;
+    padding-bottom: 18px;
+    margin: 0;
+}
+
+.AboutMe__title {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 20px;
+}
+
+.AboutMe__descr {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    margin-top: 26px;
+    margin-bottom: 100px;
+    padding-right: 40px;
+}
+
+@media screen and (max-width: 1160px) {
+    .AboutMe {
+      padding: 90px 50px;
+      box-sizing: border-box;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .AboutMe__header {
+        font-size: 40px;
+    }
+    .AboutMe__content {
+        flex-wrap: wrap;
+        padding-bottom: 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .AboutMe__descr {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 18px;
+        margin-bottom: 87px;   
+    }
+    .AboutMe__title {
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 18px; 
+    }
+    .AboutMe__picture {
+        height: 307px;
+        width: 255px;
+        margin-top: 66px;
+    }
+    .AboutMe__texts {
+        width: calc(100% - 255px);
+        max-width: auto;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .AboutMe__picture {
+      height: 352px;
+      width: 100%;
+      order: 1;
+    }
+    .AboutMe__texts {
+        width: 100%;
+        order: 2;
+    }
+}
+@media screen and (max-width: 425px) {
+    .AboutMe {
+      padding: 70px 18px;
+    }
+    .AboutMe__descr {
+        font-size: 11px;
+        font-weight: 400;
+        line-height: 16px;
+        margin-bottom: 40px;
+    }
+    .AboutMe__title {
+        font-size: 11px;
+        font-weight: 500;
+        line-height: 16px;
+    }
+    .AboutMe__header {
+        padding-top: 40px;
+        font-size: 30px;
+        line-height: 36px;
+    }
+    .AboutMe__picture {
+        margin-top: 60px;
+    }
+}
