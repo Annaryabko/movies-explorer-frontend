@@ -1,3 +1,11 @@
-# movies-explorer-frontend
+# Movies explorer
 
-URL https://anna.nomorepartiesxyz.ru/
+**About**
+
+Movie search with authorization, lists of favorites and personal information
+
+**See project**
+
+* [Link](https://anna.nomorepartiesxyz.ru)
+
+Thank you!
