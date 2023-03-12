@@ -69,10 +69,10 @@ function SavedMovies(props) {
             isLoading ? <Preloader/> : ""
           }
           {
-            savedMovies.length === 0 ? <p className="movies__noElems">Нет сохраненных фильмов</p> : ""
+            savedMovies.length === 0 ? <p className="movies__noElems">No movies saved</p> : ""
           }
           {
-            (savedMovieFiltered.length === 0) && !(savedMovies.length === 0) ? <p className="movies__noElems">Ничего не найдено</p> : ""
+            (savedMovieFiltered.length === 0) && !(savedMovies.length === 0) ? <p className="movies__noElems">Nothing found</p> : ""
           } 
         </main>
         <Footer />

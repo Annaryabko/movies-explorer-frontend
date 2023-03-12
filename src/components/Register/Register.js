@@ -77,7 +77,7 @@ function Register({history, ...props}) {
           <a className="register__logo-link" href={`${url}/`}>
             <div className="register__logo"></div>
           </a>
-            <h2 className="register__title">Добро пожаловать!</h2>
+            <h2 className="register__title">Registration</h2>
             <form className="register__elems" onSubmit={onSubmit}>
                 <div className="register__elem">
                     <span className="register__input-description">Name</span>
@@ -104,7 +104,7 @@ function Register({history, ...props}) {
                     <span className="register__input-errorText">{emailError}</span>
                 </div>
                 <div className="register__elem">
-                    <span className="register__input-description">Пароль</span>
+                    <span className="register__input-description">Password</span>
                     <input
                         value={password}
                         onChange={handlePasswordChange}
@@ -117,9 +117,9 @@ function Register({history, ...props}) {
                 </div>
                 <span className="register__input-errorText">{serverError}</span>
                 <div className="register__buttons">
-                    <input className={"register__button register__button-edit " + (formIsValid ? "" : "register__button-unactive")} type="submit" value="Зарегистрироваться"></input>
-                    <span className="register__login-text">Уже зарегистрированы?</span>
-                    <a href="/signin" className="register__login-link">Войти</a>
+                    <input className={"register__button register__button-edit " + (formIsValid ? "" : "register__button-unactive")} type="submit" value="Register"></input>
+                    <span className="register__login-text">Already registered?</span>
+                    <a href="/signin" className="register__login-link">Sign in</a>
                 </div>
 
             </form>

@@ -12,9 +12,9 @@ function PageNotFound({history}) {
     <section className="pageNotFound">
       <div className="pageNotFound__wrapper">
         <h1 className="pageNotFound__title">404</h1>
-        <p className="pageNotFound__text">Страница не найдена</p>
+        <p className="pageNotFound__text">Pge not found</p>
       </div>
-      <a className="pageNotFound__backLink" onClick={handlerGoBack}>Назад</a>
+      <a className="pageNotFound__backLink" onClick={handlerGoBack}>Go back</a>
   </section>
   );
 }

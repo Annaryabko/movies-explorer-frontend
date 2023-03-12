@@ -9,12 +9,10 @@ function SearchForm(props) {
 
   function handleSearchValue(e) {
     setSearchValue(e.target.value);
-    // props.onChange(e.target.value, isShortMovie);
   }
 
   function handleisShortMovieValue(value) {
     setIsShortMovie(value);
-    // props.onChange(searchValue, value);
   }
 
   function onSubmit(e) {
@@ -27,10 +25,10 @@ function SearchForm(props) {
     <section className="searchForm">
         <form className="searchForm__form" onSubmit={onSubmit}>
             <div className="searchForm__icon"></div>
-            <input type="text" className="searchForm__input" onChange={handleSearchValue} placeholder="Фильм" value={searchValue}/>
-            <button className="searchForm__button">Найти</button>
+            <input type="text" className="searchForm__input" onChange={handleSearchValue} placeholder="Movie" value={searchValue}/>
+            <button className="searchForm__button">Find</button>
         </form>
-        <FilterCheckox text="Короткометражки" onChange={handleisShortMovieValue} value={isShortMovie}/>
+        <FilterCheckox text="Short movies only" onChange={handleisShortMovieValue} value={isShortMovie}/>
     </section>
   );
 }

@@ -111,8 +111,8 @@ function Profile({history, ...props}) {
                     </div>
                     <span className="profile__input-errorText">{emailError}</span>
                     <span className="profile__input-errorText">{serverError}</span>
-                    <input className={"profile__button profile__button-edit " + (formIsValid ? "" : "profile__button-unactive")} type="submit" value="Редактировать"></input>
-                    <input className="profile__button profile__button-exit" type="submit" value="Выйти из аккаунта" onClick={logOut}></input>
+                    <input className={"profile__button profile__button-edit " + (formIsValid ? "" : "profile__button-unactive")} type="submit" value="Edit"></input>
+                    <input className="profile__button profile__button-exit" type="submit" value="Sign out" onClick={logOut}></input>
                 </form>
             </section>
         </main>

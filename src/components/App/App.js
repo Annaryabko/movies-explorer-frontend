@@ -42,7 +42,7 @@ function App({history}) {
     api.getUser()
     .then((user) => {
       setCurrentUser(user);
-      onError("Данные успешно сохранены");
+      onError("Data saved successfully");
     })
     .catch(() => {
       setLoggedIn(false);
@@ -62,7 +62,7 @@ function App({history}) {
   }
 
   function onError(message) {
-    setErrorMessage(message || "Ошибка");
+    setErrorMessage(message || "Error");
     setErrorOpened(true);
   }
 
@@ -79,8 +79,6 @@ function App({history}) {
   }
 
   function onRegisterSuccess(email, password) {
-    // setLoggedIn(true);
-    // localStorage.setItem('loggedIn', true);
 
     login(email, password)
       .then((token) => {
@@ -97,30 +95,21 @@ function App({history}) {
       <CurrentUserContext.Provider value={currentUser}>
       <Switch>
         <Route exact path={`${url}/`}>
-          <Main
+          {
+            loggedIn ? 
+              <Redirect to={`${url}/movies`} /> : 
+              <Login
+              onSuccess={onLoginSuccess}
+              onError={onError}
+              />
+          }
+
+          {/* <Main
             loggedIn={loggedIn}
             navOpen={onNavOpen}
           
-          />
+          /> */}
         </Route>
-
-        {/* <ProtectedRoute
-          path={`${url}/signup`}
-          component={Register}
-          onSuccess={onRegisterSuccess}
-          onError={onError}
-          loggedIn={!loggedIn}
-        >
-        </ProtectedRoute>
-
-        <ProtectedRoute
-          path={`${url}/signin`}
-          component={Login}
-          onSuccess={onLoginSuccess}
-          onError={onError}
-          loggedIn={!loggedIn}
-        >
-        </ProtectedRoute> */}
         
         <Route exact path={`${url}/signup`}>
           {
@@ -137,7 +126,7 @@ function App({history}) {
         <Route exact path={`${url}/signin`}>
           {
           loggedIn ? 
-          <Redirect to={`${url}/`} /> : 
+          <Redirect to={`${url}/movies`} /> : 
           <Login 
             onSuccess={onLoginSuccess}
             onError={onError}
@@ -170,13 +159,9 @@ function App({history}) {
           onError = {onError}
           >
         </ProtectedRoute>
-        {/* <Route>
-            {loggedIn ? <Redirect to={`${url}/movies`} /> : <Redirect to={`${url}/`} />}
-        </Route> */}
         <Route path='*'>
           <PageNotFound/>
         </Route>
-        {/* <Redirect from='*' to={`${url}/404`} /> */}
       </Switch>
       <Navigation
           isOpen= {isNavOpened}

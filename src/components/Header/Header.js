@@ -10,10 +10,10 @@ function HeaderLoggedIn(props) {
           </a>
         <div className="headerLoggedIn__hamburger" onClick={props.navOpen}></div>
         <nav className="headerLoggedIn__menu">
-            <a className="headerLoggedIn__elem headerLoggedIn__elem-active header__films" href="/movies">Фильмы</a>
-            <a className="headerLoggedIn__elem header__saved-films" href="/saved-movies">Сохранённые фильмы</a>
+            <a className="headerLoggedIn__elem headerLoggedIn__elem-active header__films" href="/movies">Movies</a>
+            <a className="headerLoggedIn__elem header__saved-films" href="/saved-movies">Saved movies</a>
             <div className="headerLoggedIn__account-wrapper">
-              <a className="headerLoggedIn__elem header__account" href="/profile">Аккаунт</a>
+              <a className="headerLoggedIn__elem header__account" href="/profile">Account</a>
               <div className="headerLoggedIn__account-icon"></div>
             </div>
         </nav>

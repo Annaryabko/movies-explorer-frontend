@@ -30,16 +30,3 @@ function Main(props) {
 }
 
 export default Main;
-
-
-
-      // {/* <Header/> */}
-      // {/* <HeaderLoggedIn/> */}
-      // {/* <Register/> */}
-      // {/* <Navigation/>
-      // <MoviesCardList/>
-      // <PageNotFound/>
-      // <Login/>
-      // <Profile/>
-      // <SearchForm/>
-      // <MoviesCardList/> */}

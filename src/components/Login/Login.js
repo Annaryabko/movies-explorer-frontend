@@ -42,7 +42,7 @@ function Login({history, ...props}) {
         if(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i.test(e.target.value)) {
           setEmailError("");
         } else {
-          setEmailError("Мейл неверный");
+          setEmailError("Email is unvalid");
         }
       }
     
@@ -52,7 +52,7 @@ function Login({history, ...props}) {
         if(e.target.value) {
           setPasswordError("");
         } else {
-          setPasswordError("Введите пароль");
+          setPasswordError("Enter password");
         }
       }
 
@@ -62,7 +62,7 @@ function Login({history, ...props}) {
         <a className="register__logo-link" href={`${url}/`}>
             <div className="register__logo"></div>
           </a>
-            <h2 className="register__title">Рады видеть!</h2>
+            <h2 className="register__title">Welcome!</h2>
             <form className="register__elems" name="login" onSubmit={onSubmit}>
                 <div className="register__elem">
                     <span className="register__input-description">E-mail</span>
@@ -78,7 +78,7 @@ function Login({history, ...props}) {
                     <span className="register__input-errorText">{emailError}</span>
                 </div>
                 <div className="register__elem">
-                    <span className="register__input-description">Пароль</span>
+                    <span className="register__input-description">Password</span>
                     <input
                         value={password}
                         onChange={handlePasswordChange}
@@ -93,9 +93,9 @@ function Login({history, ...props}) {
                 <span className="register__input-errorText">{serverError}</span>
 
                 <div className="register__buttons">
-                    <input className={"register__button register__button-edit " + (formIsValid ? "" : "register__button-unactive")} type="submit" value="Войти"></input>
-                    <span className="register__login-text">Ещё не зарегистрированы?</span>
-                    <a href="/signup" className="register__login-link">Регистрация</a>
+                    <input className={"register__button register__button-edit " + (formIsValid ? "" : "register__button-unactive")} type="submit" value="Enter"></input>
+                    <span className="register__login-text">Not registered yet?</span>
+                    <a href="/signup" className="register__login-link">Registration</a>
                 </div>
                 
             </form>

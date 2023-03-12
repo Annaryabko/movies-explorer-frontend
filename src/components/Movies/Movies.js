@@ -23,7 +23,7 @@ function Movies(props) {
     api.getMovies()
       .then((res) => setSavedMovies(res))
       .catch(() => {
-        setServerError("Ошибка, попробуйте через неделю еще раз");
+        setServerError("Server error");
       });
   }, []);
 
@@ -60,7 +60,7 @@ function Movies(props) {
           localStorage.setItem('initialMovies', JSON.stringify(movies));
         })
         .catch(() => {
-          setServerError("Ошибка, попробуйте через неделю еще раз");
+          setServerError("Server error");
         });
       
       setIsLoading(true);
@@ -83,7 +83,7 @@ function Movies(props) {
           }
 
           {
-            !serverError && !searchValue ? <p className="movies__noElems">Нужно ввести ключевое слово!</p> : ""
+            !serverError && !searchValue ? <p className="movies__noElems">Please, start typing keyword</p> : ""
           }
           {serverError}
           {

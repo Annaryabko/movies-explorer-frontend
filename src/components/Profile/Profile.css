@@ -107,12 +107,12 @@
 }
 
 .profile__button-edit {
-    margin-top: 40vh;
+    margin-top: 10vh;
+    cursor: pointer;
 }
 
 .profile__button-exit {
     color: #FF4062;
-
 }
 
 
@@ -129,7 +129,7 @@
         margin-bottom: 96px;
     }
     .profile__button-edit {
-        margin-top: 200px;
+        margin-top: 20vh;
     }
   }
   
@@ -152,6 +152,6 @@
         margin-bottom: 16px;
     }
     .profile__button-edit {
-        margin-top: 45vh;
+        margin-top: 20vh;
     }
   }
